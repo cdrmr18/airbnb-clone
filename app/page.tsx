@@ -3,6 +3,7 @@ import Banner from '../components/Banner/Banner'
 import SmallCard from '../components/Card/SmallCard/SmallCard'
 import MediumCard from '../components/Card/MediumCard/MediumCard'
 import LargeCard from '../components/Card/LargeCard/LargeCard'
+import Footer from '../components/Footer/Footer'
 
 export default async function Home() {
 
@@ -44,6 +45,7 @@ export default async function Home() {
           />
         </section>
       </main>
+      <Footer />
     </div>
   );
 }
