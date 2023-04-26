@@ -2,6 +2,7 @@ import  {exploreData, cardsData}  from "../data/data.js"
 import Banner from '../components/Banner/Banner'
 import SmallCard from '../components/Card/SmallCard/SmallCard'
 import MediumCard from '../components/Card/MediumCard/MediumCard'
+import LargeCard from '../components/Card/LargeCard/LargeCard'
 
 export default async function Home() {
 
@@ -32,6 +33,15 @@ export default async function Home() {
               <MediumCard key={img} img={img} title={title} />
             ))}
           </div>
+        </section>
+
+        <section>
+          <LargeCard
+          img="https://links.papareact.com/4cj"
+          title="The greatest outdoors"
+          description="Wishlists curated by Airbnb."
+          buttonText="Get Inspired"
+          />
         </section>
       </main>
     </div>
