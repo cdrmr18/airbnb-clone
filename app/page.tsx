@@ -1,4 +1,5 @@
 import  {exploreData, cardsData}  from "../data/data.js"
+import Header from "../components/Header/Header";
 import Banner from '../components/Banner/Banner'
 import SmallCard from '../components/Card/SmallCard/SmallCard'
 import MediumCard from '../components/Card/MediumCard/MediumCard'
@@ -8,6 +9,7 @@ export default async function Home() {
 
   return (
     <div>
+      <Header />
       <Banner />
       <main className="max-w-7xl mx-auto px-8 sm:px-16">
         <section className="pt-6">
@@ -37,10 +39,10 @@ export default async function Home() {
 
         <section>
           <LargeCard
-          img="https://links.papareact.com/4cj"
-          title="The greatest outdoors"
-          description="Wishlists curated by Airbnb."
-          buttonText="Get Inspired"
+            img="https://links.papareact.com/4cj"
+            title="The greatest outdoors"
+            description="Wishlists curated by Airbnb."
+            buttonText="Get Inspired"
           />
         </section>
       </main>

@@ -1,11 +1,30 @@
-export default function Search() {
+"use client";
+import Header from "../../components/Header/Header";
+
+export default function Search({ searchParams }) {
+  const { location, startDate, endDate, noOfGuests } = searchParams;
+
+  const options = {
+    month: "long",
+    day: "numeric",
+  };
+  const formattedStartDate = startDate ? new Date(startDate).toLocaleDateString("en-US", options) : "";
+  const formattedEndDate = endDate ? new Date(endDate).toLocaleDateString("en-US", options) : "";
+  const dateRange = formattedStartDate && formattedEndDate ? `${formattedStartDate} to ${formattedEndDate}` : "";
+
   return (
     <div>
+      <Header
+        placeholder={`${location} |  ${dateRange} | ${noOfGuests} ${+noOfGuests === 1 ? "guest" : "guests"}`}
+      />
       <main className="flex">
         <section className="flex-grow pt-14 px-6">
-          <p className="text-xs">300+ Stays for 5 number of guests</p>
+          <p className="text-xs">
+            300+ Stays - {dateRange} - for {noOfGuests}{" "}
+            {+noOfGuests === 1 ? "guest" : "guests"}
+          </p>
           <h1 className="text-3xl font-semibold mt-2 mb-6">
-            Stays in New York
+            Stays in {location}
           </h1>
 
           <div className="hidden lg:inline-flex mb-5 space-x-3 text-gray-800 whitespace-nowrap">
