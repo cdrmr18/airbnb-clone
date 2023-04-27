@@ -1,5 +1,6 @@
-"use client";
-import Header from "../../components/Header/Header";
+import Header from "../../components/Header";
+import ListingCard from "../../components/Card/ListingCard/index";
+import {listingsData} from "../../data/data";
 
 export default function Search({ searchParams }) {
   const { location, startDate, endDate, noOfGuests } = searchParams;
@@ -15,7 +16,9 @@ export default function Search({ searchParams }) {
   return (
     <div>
       <Header
-        placeholder={`${location} |  ${dateRange} | ${noOfGuests} ${+noOfGuests === 1 ? "guest" : "guests"}`}
+        placeholder={`${location} |  ${dateRange} | ${noOfGuests} ${
+          +noOfGuests === 1 ? "guest" : "guests"
+        }`}
       />
       <main className="flex">
         <section className="flex-grow pt-14 px-6">
@@ -33,6 +36,12 @@ export default function Search({ searchParams }) {
             <p className="button">Price</p>
             <p className="button">Rooms and Beds</p>
             <p className="button">More filters</p>
+          </div>
+
+          <div className="flex flex-col">
+            {listingsData.map((listing) => (
+              <ListingCard key={listing.img} listing={listing} />
+            ))}
           </div>
         </section>
       </main>
