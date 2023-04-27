@@ -45,7 +45,6 @@ export default function Search({ searchParams }) {
             ))}
           </div>
         </section>
-
         <section className="hidden lg:inline-flex">
           <Map />
         </section>
