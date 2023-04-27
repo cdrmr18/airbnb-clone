@@ -1,6 +1,6 @@
 import Header from "../../components/Header/index";
 import ListingCard from "../../components/Card/ListingCard/index";
-import Map from "../../components/Map/index";
+import SearchMap from "../../components/Map/index";
 import {listingsData} from "../../data/data";
 
 export default function Search({ searchParams }) {
@@ -46,8 +46,8 @@ export default function Search({ searchParams }) {
           </div>
         </section>
 
-        <section className="hidden lg:inline-flex">
-          <Map />
+        <section className="hidden xl:inline-flex xl:min-w-[40%] sticky top-[54px] h-[calc(100vh-30px)]">
+          <SearchMap />
         </section>
       </main>
     </div>
