@@ -1,5 +1,6 @@
-import Header from "../../components/Header";
+import Header from "../../components/Header/index";
 import ListingCard from "../../components/Card/ListingCard/index";
+import Map from "../../components/Map/index";
 import {listingsData} from "../../data/data";
 
 export default function Search({ searchParams }) {
@@ -43,6 +44,9 @@ export default function Search({ searchParams }) {
               <ListingCard key={listing.img} listing={listing} />
             ))}
           </div>
+        </section>
+        <section className="hidden lg:inline-flex">
+          <Map />
         </section>
       </main>
     </div>
