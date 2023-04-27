@@ -1,5 +1,5 @@
 import './globals.css'
-import Footer from "../components/Footer/Footer";
+import Footer from "../components/Footer";
 
 export const metadata = {
   title: 'AirBnB',

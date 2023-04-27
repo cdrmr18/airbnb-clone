@@ -1,9 +1,9 @@
 import  {exploreData, cardsData}  from "../data/data.js"
-import Header from "../components/Header/Header";
-import Banner from '../components/Banner/Banner'
-import SmallCard from '../components/Card/SmallCard/SmallCard'
-import MediumCard from '../components/Card/MediumCard/MediumCard'
-import LargeCard from '../components/Card/LargeCard/LargeCard'
+import Header from "../components/Header/index.js";
+import Banner from '../components/Banner/index.js'
+import SmallCard from '../components/Card/SmallCard/index.js'
+import MediumCard from '../components/Card/MediumCard/index.js'
+import LargeCard from '../components/Card/LargeCard/index.js'
 
 export default async function Home() {
 
