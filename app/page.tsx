@@ -1,14 +1,15 @@
 import  {exploreData, cardsData}  from "../data/data.js"
+import Header from "../components/Header/index.js";
 import Banner from '../components/Banner/index.js'
 import SmallCard from '../components/Card/SmallCard/index.js'
 import MediumCard from '../components/Card/MediumCard/index.js'
 import LargeCard from '../components/Card/LargeCard/index.js'
-import Footer from '../components/Footer/index.js'
 
 export default async function Home() {
 
   return (
     <div>
+      <Header />
       <Banner />
       <main className="max-w-7xl mx-auto px-8 sm:px-16">
         <section className="pt-6">
@@ -38,14 +39,13 @@ export default async function Home() {
 
         <section>
           <LargeCard
-          img="https://links.papareact.com/4cj"
-          title="The greatest outdoors"
-          description="Wishlists curated by Airbnb."
-          buttonText="Get Inspired"
+            img="https://links.papareact.com/4cj"
+            title="The greatest outdoors"
+            description="Wishlists curated by Airbnb."
+            buttonText="Get Inspired"
           />
         </section>
       </main>
-      <Footer />
     </div>
   );
 }
